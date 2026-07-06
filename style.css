@@ -1,0 +1,134 @@
+*{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{overflow-x: hidden;}
+
+        nav{
+            background: hsl(0, 0%, 10%);
+            width: 100%;
+            min-height: 10vh; display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+        nav ul{
+            display: flex;
+            flex-direction: row-reverse;
+            list-style: none;gap: 3rem; padding-right:3rem;
+            flex-wrap: wrap;
+        }        
+        nav ul li a{
+            color: wheat;
+            text-decoration: none;
+        }
+
+        .bluebar{
+            background: hsl(208, 100%, 35%);
+            width: 100%; 
+            min-height: 15vh;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            gap: 0;
+            text-align: center;
+        }
+        .bluebar h1{
+            font-weight: bold;
+            color: hsl(0, 0%, 95%);
+        }
+
+        .bluebar p{
+            font: italic;
+            font-size: small;
+            color: hsl(0, 0%, 90%);
+        }
+
+        .card{
+            background: hsl(0, 0%, 100%);
+            width: 100%;
+            max-width: 320px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 16px 40px hsla(0, 0%, 0%, 0.12);
+            display: flex;
+            flex-direction: column;
+        }
+        .card-Img{
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background-color: hsl(0, 0%, 95%);
+        }
+        .card-Img img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .card-text{
+            padding: 1rem;
+            color: hsl(0, 0%, 20%);
+            font-family: Arial, sans-serif;
+        }
+        .card-text button{
+            background: hsl(215, 100%, 58%);
+            color:  hsl(0, 0%, 95%);
+            border: none;
+            font-size: medium; padding: 0.5rem;
+        }
+        .footer{
+            padding-top:1rem ;
+            padding-bottom: 1rem;
+            background: hsl(0, 0%, 5%);
+            width: 100%; 
+            min-height: 15vh; 
+            display: grid; 
+            place-items: centre; 
+            grid-template-columns: repeat(3,1fr);
+        }
+        .footer div{
+            display: flex;
+            color: hsl(0, 0%, 80%);
+            justify-content: center;
+            font-size: small
+        }
+
+        .footer div p span{
+            font-weight: bold;
+            color: white;
+        }
+
+        .news-grid{
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+            background: hsl(0, 0%, 90%);
+            max-width: 100vw;
+            min-height: 60vh;
+            padding: 1rem;
+        }
+
+        @media (max-width: 900px) {
+            .news-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                justify-content: center;
+                padding-right: 0;
+                gap: 1rem;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+            .card {
+                max-width: none;
+            }      
+            /* .footer {
+                grid-template-columns: 1fr !important;
+            }*/
+        }
